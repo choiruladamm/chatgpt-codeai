@@ -30,8 +30,8 @@ npm install
 - Run project
 
 ```
-npm run server // client side
-npm run dev // server side
+npm run server // server side
+npm run dev // client side
 ```
 
 ## Don't Forget to
