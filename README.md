@@ -12,22 +12,22 @@ Clone OpenAI Chat GPT, Try this CodeAI https://codeai-ca.vercel.app/
 
 ## Building from Source
 
-1. Clone this Repository
+1. Clone this repository
 
 ```
 git clone https://github.com/choiruladamm/chatgpt-codeai.git
 ```
 
-2. Create File .env in Folder Server
-3. Add OPENAI_API_KEY=" Replace your apikey "
-4. Open Folder Client/script.js, Change fetch('http://localhost:5000/')
-4. Instal Package
+2. Create file .env in folder server
+3. Add OPENAI_API_KEY=" replace your apikey "
+4. Open folder client/script.js, change fetch('http://localhost:5000/')
+5. Instal package
 
 ```
 npm install
 ```
 
-5. Run Project
+6. Run project
 
 ```
 npm run server // client side
