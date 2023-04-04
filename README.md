@@ -1,5 +1,5 @@
 # ChatGPT - Code AI
-Clone OpenAI Chat GPT, Try this CodeAI https://codeai-ca.vercel.app/
+Clone OpenAI Chat GPT, Try this CodeAI
 
 ## Tech Stack
 - Vanilla Javascript Using [Vite](https://vitejs.dev/)
