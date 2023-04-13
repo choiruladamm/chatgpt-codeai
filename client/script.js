@@ -77,7 +77,7 @@ const handleSubmit = async (e) => {
 
   // fetch data from server -> bot's response
 
-  const response = await fetch("https://server-codeai.cyclic.app/", {
+  const response = await fetch("https://openai-clone.cyclic.app/", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
