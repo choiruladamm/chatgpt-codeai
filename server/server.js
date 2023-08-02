@@ -15,6 +15,8 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+const REQUEST_DELAY_MS = 2000; // Ubah sesuai kebutuhan
+
 app.get("/", async (req, res) => {
   res.status(200).send({
     message: "Success",
@@ -24,6 +26,9 @@ app.get("/", async (req, res) => {
 app.post("/", async (req, res) => {
   try {
     const prompt = req.body.prompt;
+
+    // Memberi jeda antara permintaan API
+    await new Promise((resolve) => setTimeout(resolve, REQUEST_DELAY_MS));
 
     const response = await openai.createCompletion({
       model: "text-davinci-003",
@@ -40,8 +45,13 @@ app.post("/", async (req, res) => {
     });
   } catch (error) {
     console.log(error);
-    res.status(500).send(error || "Onok sng error");
+    res
+      .status(500)
+      .send(error.message || "Terjadi kesalahan saat memproses permintaan.");
   }
 });
 
-app.listen(5000, () => console.log("Server is running"));
+const PORT = 5000;
+app.listen(PORT, () => {
+  console.log(`Server berjalan di port ${PORT}`);
+});
